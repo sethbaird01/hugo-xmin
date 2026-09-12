@@ -1,9 +1,11 @@
   <footer>
-  {{ partial "foot_custom.html" . }}
   {{ with .Site.Params.footer }}
   <hr/>
   {{ replace . "{Year}" now.Year | markdownify }}
   {{ end }}
+  <br>
+  <div class="small-text">  Site powered by Hugo with theme by Yihui Xie.
+</div>
   </footer>
   </body>
 </html>

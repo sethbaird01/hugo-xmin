@@ -6,22 +6,60 @@ body {
 }
 
 /* header and footer areas */
-.menu { padding: 0; }
+/* .menu { padding: 0; } */
+.menu { 
+  padding: 0; 
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adds space between all items */
+}
 .menu li { display: inline-block; }
-.article-meta, .menu a {
+.article-meta, .menu a:not(.logo-text, .logo-link) {
   text-decoration: none;
   background: #eee;
   padding: 5px;
   border-radius: 5px;
 }
-.menu, .article-meta, footer { text-align: center; }
+.menu, .article-meta { text-align: left; }
 .title { font-size: 1.1em; }
+
+.menu svg {
+  display: block;
+  height: calc(1.5em + 15px);
+  width: auto;
+
+  /* Remove margin-right: auto from here */
+}
+
+/* Pins text next to the logo and pushes all following <li> elements right */
+.logo-text {
+  margin-right: auto;
+  color:#000;
+  text-decoration:none;
+}
+
+/* Hide on mobile screens */
+@media (max-width: 600px) {
+  .logo-text {
+    display: none;
+  }
+  /* Fallback: restore margin-right to the SVG when the text disappears */
+  .menu svg {
+    margin-right: auto;
+    height: calc(1em + 15px);
+
+  }
+}
+
+footer { text-align: center; }
 footer a { text-decoration: none; }
+.small-text{
+  font-size: 0.7em;
+}
 hr {
   border-style: dashed;
   color: #ddd;
 }
-
 /* code */
 pre {
   border: 1px solid #ddd;

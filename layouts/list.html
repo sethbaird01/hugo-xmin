@@ -2,13 +2,8 @@
 
 {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
-{{ end }}
-
-{{ .Content }}
-
 <ul>
   {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
   {{ range (where $pages "Section" "!=" "") }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
@@ -16,5 +11,9 @@
   </li>
   {{ end }}
 </ul>
+{{ end }}
+
+{{ .Content }}
+
 
 {{ partial "footer.html" . }}
