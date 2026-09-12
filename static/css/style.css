@@ -2,7 +2,7 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 1em;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 
 /* header and footer areas */
@@ -19,6 +19,8 @@ body {
   background: #eee;
   padding: 5px;
   border-radius: 5px;
+  color:#000;
+
 }
 .menu, .article-meta { text-align: left; }
 .title { font-size: 1.1em; }
@@ -53,9 +55,11 @@ body {
 
 footer { text-align: center; }
 footer a { text-decoration: none; }
+
 .small-text{
   font-size: 0.7em;
 }
+
 hr {
   border-style: dashed;
   color: #ddd;

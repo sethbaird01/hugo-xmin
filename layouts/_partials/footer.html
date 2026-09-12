@@ -4,8 +4,11 @@
   {{ replace . "{Year}" now.Year | markdownify }}
   {{ end }}
   <br>
-  <div class="small-text">  Site powered by Hugo with theme by Yihui Xie.
-</div>
+    {{ if .IsHome }}
+    <div class="small-text">
+    Site powered by Hugo, hosted on GitHub Pages, with theme by Yihui Xie.
+  </div>
+  {{ end }}
   </footer>
   </body>
 </html>

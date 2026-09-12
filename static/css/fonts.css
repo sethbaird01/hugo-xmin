@@ -1,7 +1,10 @@
 body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: "New Century Schoolbook","Century Schoolbook", "Century Schoolbook L", Georgia, serif
 }
 code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 85%;
+}
+.article-meta, .menu a:not(.logo-text, .logo-link) {
+  font-family: "Franklin gothic medium","arial narrow","DejaVu Sans Condensed","helvetica neue",helvetica,sans-serif;
 }
